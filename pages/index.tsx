@@ -94,7 +94,7 @@ export default function Home() {
   const item = DATA[n % DATA.length];
 
   return (
-    <>
+    <div style={{width: "100%", height: "100%", backgroundColor: "#FFF"}}>
       <div
         style={{
           width: 1000,
@@ -107,7 +107,7 @@ export default function Home() {
       >
         <div style={{ width: 600 }}>
           <button
-            style={{ width: 75, height: 30, backgroundColor: "#333" }}
+            style={{ width: 75, height: 30, backgroundColor: "#333", color: "#FFF" }}
             onClick={() => {
               setN(n - 1);
               setStartTime(time);
@@ -116,7 +116,7 @@ export default function Home() {
             Back
           </button>
           <button
-            style={{ width: 75, height: 30, backgroundColor: "#333" }}
+            style={{ width: 75, height: 30, backgroundColor: "#333", color: "#FFF" }}
             onClick={() => {
               setN(n + 1);
               setStartTime(time);
@@ -152,6 +152,6 @@ export default function Home() {
           <p style={{ paddingTop: 20 }}>PROMPT: {item.prompt}</p>
         </div>
       </div>
-    </>
+    </div>
   );
 }
