@@ -29,28 +29,32 @@ const DATA = [
     prompt: "Tessellation",
   },
   {
-    url: "https://editor.p5js.org/chrisamaphone/full/4kcL8LkDp",
+    url: "https://editor.p5js.org/chrisamaphone/full/ftSltqCC5",
     prompt: "Something you’ve always wanted to learn (Voronoi tesselation)",
   },
   {
-    url: "https://editor.p5js.org/chrisamaphone/full/suuOCH_D-",
+    url: "https://editor.p5js.org/chrisamaphone/full/4kcL8LkDp",
     prompt: "Aesemic",
   },
   {
-    url: "https://editor.p5js.org/chrisamaphone/full/2FrY30K-t",
+    url: "https://editor.p5js.org/chrisamaphone/full/suuOCH_D-",
     prompt: "Black and white",
   },
   {
-    url: "https://editor.p5js.org/chrisamaphone/full/UJLDqGu6X",
+    url: "https://editor.p5js.org/chrisamaphone/full/2FrY30K-t",
     prompt: "More Moiré",
   },
   {
-    url: "https://editor.p5js.org/chrisamaphone/full/FSRX1pVet",
+    url: "https://editor.p5js.org/chrisamaphone/full/UJLDqGu6X",
     prompt: "Textile",
   },
   {
-    url: "https://editor.p5js.org/chrisamaphone/full/-B7JKXzvI",
+    url: "https://editor.p5js.org/chrisamaphone/full/FSRX1pVet",
     prompt: "Yayoi Kusama",
+  },
+  {
+    url: "https://editor.p5js.org/chrisamaphone/full/-B7JKXzvI",
+    prompt: "My kid could have made that"
   },
   {
     url: "https://editor.p5js.org/chrisamaphone/full/ep0ULCfMu",
@@ -147,9 +151,11 @@ export default function Home() {
           <p>
             These generative artworks were made for Genuary 2023
             (https://genuary.art/), an online community challenge to respond to
-            a different generative art prompt each day in the month of January
+            a different generative art prompt each day in the month of January.
           </p>
           <p style={{ paddingTop: 20 }}>PROMPT: {item.prompt}</p>
+          <br></br>
+          <p>By Chris Martens using p5.js</p>
         </div>
       </div>
     </div>
