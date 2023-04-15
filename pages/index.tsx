@@ -3,24 +3,6 @@ import React from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const LIST = [
-  "https://editor.p5js.org/chrisamaphone/full/r8bLQ1HnK",
-  "https://editor.p5js.org/chrisamaphone/full/942Nd9nOG",
-  "https://editor.p5js.org/chrisamaphone/full/pYxHJricW",
-  "https://editor.p5js.org/chrisamaphone/full/DsddLGhll",
-  "https://editor.p5js.org/chrisamaphone/full/Sf_SNYaWJ",
-  "https://editor.p5js.org/chrisamaphone/full/3YJItdQaL",
-  "https://editor.p5js.org/chrisamaphone/full/4kcL8LkDp",
-  "https://editor.p5js.org/chrisamaphone/full/suuOCH_D-",
-  "https://editor.p5js.org/chrisamaphone/full/2FrY30K-t",
-  "https://editor.p5js.org/chrisamaphone/full/UJLDqGu6X",
-  "https://editor.p5js.org/chrisamaphone/full/FSRX1pVet",
-  "https://editor.p5js.org/chrisamaphone/full/-B7JKXzvI",
-  "https://editor.p5js.org/chrisamaphone/full/ep0ULCfMu",
-  "https://editor.p5js.org/chrisamaphone/full/pl6LJSYfi",
-  "https://editor.p5js.org/chrisamaphone/full/4t4hca1yn",
-];
-
 const DATA = [
   {
     url: "https://editor.p5js.org/chrisamaphone/full/r8bLQ1HnK",
@@ -88,7 +70,7 @@ const DATA = [
 const RELOAD_TIME = 45000;
 
 export default function Home() {
-  const [n, setN] = React.useState(0);
+  const [n, setN] = React.useState(DATA.length);
   const [startTime, setStartTime] = React.useState(performance.now());
   const [time, setTime] = React.useState(performance.now());
 
@@ -116,6 +98,7 @@ export default function Home() {
       <div
         style={{
           width: 1000,
+          height: 3000,
           margin: "auto",
           marginTop: 10,
           display: "flex",
@@ -124,7 +107,16 @@ export default function Home() {
       >
         <div style={{ width: 600 }}>
           <button
-            style={{ width: 100, height: 30 }}
+            style={{ width: 75, height: 30, backgroundColor: "#333" }}
+            onClick={() => {
+              setN(n - 1);
+              setStartTime(time);
+            }}
+          >
+            Back
+          </button>
+          <button
+            style={{ width: 75, height: 30, backgroundColor: "#333" }}
             onClick={() => {
               setN(n + 1);
               setStartTime(time);
@@ -135,7 +127,7 @@ export default function Home() {
           <button
             disabled
             style={{
-              width: 500 * width,
+              width: 450 * width,
               height: 30,
               backgroundColor: "#01eaea",
             }}
